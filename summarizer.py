@@ -2,7 +2,8 @@
 import os 
 import google.generativeai as gen
 import streamlit as st
-gen.configure(api_key=st.secrets["api"])
+# gen.configure(api_key=st.secrets["api"])
+Api_Key=st.secrets["api"]
 model=gen.GenerativeModel('gemini-1.5-flash-002')
 st.title("(●`◡`●)Theory summarizer")
 theory=st.text_input("Paste your theory here:")
