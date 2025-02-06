@@ -14,7 +14,8 @@ if st.button("Start"):
     else:
         response=model.generate_content(['''Read the theory,and write summary of theory
                                  in such a way that a person after reading it gain knowledge about 
-                                 the whole theory.and aslo explain typical words of theory''',theory],stream=True)
+                                 the whole theory.and aslo explain typical words of theory
+                                 and write full forms of all short form words in bracket''',theory],stream=True)
         with st.spinner('Loading'):                         
           for chunk in response:
             for words in chunk:
